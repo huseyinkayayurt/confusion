@@ -15,9 +15,9 @@ class Dishdetail extends Component {
             const comment = comments.map((cmt) => {
                 return (
 
-                    <ul class="list-unstyled">
+                    <ul className="list-unstyled">
                         <li>{cmt.comment}</li>
-                        <li>-- {cmt.author},{cmt.date}</li>
+                        <li>-- {cmt.author},{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(Date.parse(cmt.date)))}</li>
                     </ul>
 
 
